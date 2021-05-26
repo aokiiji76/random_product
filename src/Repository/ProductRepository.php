@@ -34,17 +34,20 @@ class ProductRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Product
+
+    /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function randomProduct(): array
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
+
+            ->orderBy('RAND()')
             ->getQuery()
-            ->getOneOrNullResult()
+            ->getResult()
+
         ;
     }
-    */
+
 }
