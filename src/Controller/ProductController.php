@@ -10,13 +10,26 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ProductController extends AbstractController
 {
+
     /**
-     * @Route("/", name="product")
+     * @Route("/list", name="browse_product")
+     */
+    public function browse(ProductRepository $productRepository): Response
+    {
+        //dd($productRepository->randomProduct());
+        return $this->render('product/browse.html.twig', [
+            'products' => $productRepository->randomProduct(),
+        ]);
+    }
+
+
+    /**
+     * @Route("/", name="read_product")
      */
     public function index(ProductRepository $productRepository): Response
     {
-        return $this->render('product/product.html.twig', [
-            'products' => $productRepository->randomProduct(),
+        return $this->render('product/read.html.twig', [
+            'product' => $productRepository->randomProduct(),
         ]);
     }
 }

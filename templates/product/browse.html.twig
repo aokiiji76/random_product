@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RandomProduct{% endblock %}
+
+{% block body %}
+
+    <div class="header" >
+
+        <button type="button" class="btn btn-success" >
+            <a class="header_btn" href="/">Page aléatoire</a>
+        </button>
+
+    </div>
+
+
+
+    <div class="container_browse" >
+
+        {% for product in products %}
+
+        <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+            {#        <div class="card-header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ products.0.name }}</font></font></div>#}
+            <img src="{{ product.image }}" alt="">
+            <div class="card-body">
+                <h1 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ product.name }}</font></font></h1>
+                <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ product.description }}</font></font></p>
+                <p>Prix : {{ product.price }} Euros</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

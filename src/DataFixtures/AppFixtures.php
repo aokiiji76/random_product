@@ -31,7 +31,7 @@ class AppFixtures extends Fixture
             $product->setName($faker->word);
             $product->setPrice(random_int(10, 100));
             $product->setDescription($faker->text($maxNbChars = 200) );
-            $product->setImage('https://picsum.photos/400/400');
+            $product->setImage('https://picsum.photos/200/200');
             $manager->persist($product);
 
 
