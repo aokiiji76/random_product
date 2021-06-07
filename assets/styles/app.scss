@@ -2,43 +2,6 @@ body {
     background-color: lightgray;
 
 }
-
-.header{
-
-    display: flex;
-    justify-content: center;
-    margin-top:50px;
-
-    .btn-success{
-        background-color: chocolate;
-    }
-    .header_btn{
-        text-decoration: none;
-        color: black;
-
-
-    }
-
-}
-
-
-.container{
-    display:flex;
-    justify-content: center;
-    margin-top: 50px;
-
-    .card-body{
-        background-color: chocolate;
-    }
-
-}
-
-.container_browse{
-   // display: flex;
-
-    margin-top: 50px;
-
-    .card-body{
-        background-color: chocolate;
-    }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

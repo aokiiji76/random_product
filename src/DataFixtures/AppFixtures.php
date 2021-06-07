@@ -14,14 +14,6 @@ class AppFixtures extends Fixture
      */
     public function load(ObjectManager $manager)
     {
-//        for ($i = 0; $i < 20; $i++) {
-//            $product = new Product();
-//            $product->setName('Produit n° ' . $i);
-//            $product->setPrice(mt_rand(10, 100));
-//            $product->setDescription("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto a?");
-//            $product->setImage('https://fakeimg.pl/300/');
-//            $manager->persist($product);
-//        }
 
         $faker = Factory::create();
 
